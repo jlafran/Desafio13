@@ -1,0 +1,25 @@
+<div>
+  <h1 style="text-align: center;">List Messages:</h1>
+  {{#if mensajes}}
+  <table style="margin: 0 auto; width:50%" class="table">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">User</th>
+        <th scope="col">Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each mensajes as |mensaje| }}
+      <tr>
+          <td> {{ mensaje.timestamp }} </td>
+          <td> {{ mensaje.user }} </td>
+          <td> {{ mensaje.text }} </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  {{else}}
+  <h2 style="text-align: center; color:grey">No message found</h2>
+  {{/if}}
+</div>
